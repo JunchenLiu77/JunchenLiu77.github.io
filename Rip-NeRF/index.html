@@ -1,22 +1,46 @@
-<!<!DOCTYPE html>
+<!DOCTYPE html>
   <html lang="en">
-
   <head>
     <meta charset="utf-8">
-    <title>Rip-NeRF: Anti-aliasing Radiance Fields with Ripmap-Encoded Platonic Solids</title>
+    <meta name="description" content=".">
+    <meta name="keywords" content="Rip-NeRF, Tri-MipRF, Zip-NeRF, Instant-NGP, Mip-NeRF360, Mip-NeRF, NeRF">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rip-NeRF: Anti-aliasing Radiance Fields with Ripmap-Encoded Platonic Solids</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
-    <link rel="stylesheet" href="static/css/academicons.min.css">
-    <link rel="stylesheet" href="static/css/fontawesome.min.css">
-    <script src="static/js/all.min.js"></script>
-    <script src="static/js/bulma-carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./static/fonts/academicons.svg">
 
-
-    <link rel="stylesheet" href="static/css/style.css">
-    <script src="static/js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./static/js/all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/script.js"></script>
+    <script src="./static/js/index.js"></script>
   </head>
 
-  <body>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LKCDBW8851"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-LKCDBW8851');
+  </script>
+
+
+  <body> 
     <section class="hero">
       <div class="hero-body">
         <div class="container is-max-desktop">
@@ -137,6 +161,42 @@
       </div>
     </section>
 
+    <section class="hero is-light">
+      <div class="hero-body ">
+        <div class="container" style="text-align: center">
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item item-mic">
+              <video poster="" id="mic" autoplay controls muted loop playsinline height="100%">
+                <source src="./resources/mic_drums.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-chair">
+              <video poster="" id="chair" autoplay controls muted loop playsinline height="100%">
+                <source src="./resources/chair.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-ship">
+              <video poster="" id="ship" autoplay controls muted loop playsinline height="100%">
+                <source src="./resources/ship.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-materials">
+              <video poster="" id="materials" autoplay controls muted loop playsinline height="100%">
+                <source src="./resources/materials_lego.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-hotdog">
+              <video poster="" id="hotdog" autoplay controls muted loop playsinline height="100%">
+                <source src="./resources/hotdog_ficus.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          Qualitative comparison of the full-resolution and 1/8 resolution renderings of either novel-view images or <br> error maps of
+          <b>Zip-NeRF (left)</b>, <b>Rip-NeRF (middle)</b>, and <b>Tri-MipRF (right)</b> on the multi-scale Blender dataset.
+        </div>
+      </div>
+    </section>
+
 
     <section class="section">
       <div class="container is-max-desktop">
@@ -213,7 +273,6 @@
         <!--/ Paper video. -->
       </div>
     </section>
-
 
     <section class="section">
       <div class="container is-max-desktop">
@@ -482,14 +541,7 @@
         <h2 class="title">BibTeX</h2>
         <pre><code>
       TODO
-    </code></pre>
-      </div>
-    </section>
-
-    <section class="section" id="Acknowledgements">
-      <div class="container is-max-desktop content">
-        <h2 class="title">Acknowledgements</h2>
-        TODO
+        </code></pre>
       </div>
     </section>
 
@@ -530,10 +582,10 @@
       }
 
       // Initialize all div with carousel class
-      var carousels = bulmaCarousel.attach('.carousel', options);
+      <!-- var carousels = bulmaCarousel.attach('.carousel', options); -->
 
       for (var i = 0; i < carousels.length; i++) {
-        // Add listener to  event
+        // Add listener to event
         carousels[i].on('before:show', () => { });
       }
 
